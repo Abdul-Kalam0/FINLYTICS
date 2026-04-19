@@ -27,6 +27,11 @@ export const register = async (req, res) => {
       });
     }
 
+    //make first user as admin
+
+    const countUser = await UserModel.countDocuments();
+    role = countUser === 0 ? "admin" : "viewer";
+
     //check for duplicacy
     email = email.toLowerCase().trim();
     name = name.trim();
@@ -43,7 +48,7 @@ export const register = async (req, res) => {
       name,
       email,
       password,
-      role: "viewer",
+      role,
     });
 
     return res.status(201).json({
@@ -151,3 +156,5 @@ export const logout = async (req, res) => {
     });
   }
 };
+
+

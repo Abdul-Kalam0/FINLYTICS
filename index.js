@@ -10,11 +10,14 @@ app.use(express.json());
 app.use(cookieParser());
 
 import authRoutes from "./routes/authRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 app.get("/", (req, res) => {
   res.send("API running...");
 });
 
-app.use("/", authRoutes);
+app.use("/auth", authRoutes);
+
+app.use("/users", userRoutes);
 
 export default app;
