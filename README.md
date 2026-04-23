@@ -3,6 +3,11 @@
 FinLytics is a production-ready backend system for tracking, analyzing, and understanding personal financial data. It combines secure authentication, role-based access control, advanced analytics, and AI-powered insights to deliver a complete financial intelligence platform.
 
 ---
+## 🌐 Live Demo
+
+🔗 Frontend:   
+🔗 Backend API: 
+---
 
 ## 🧠 Features
 
